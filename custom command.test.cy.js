@@ -5,20 +5,20 @@ describe("AUTOMATION PAY BILLS TEST", () => {
     it('AUTOMATION LOGIN', () => {
       cy.visit('http://zero.webappsecurity.com/bank/pay-bills.html')
   
-      cy.fixture("user").then(user => { 
+      /*cy.fixture("user").then(user => { 
         const username = user.username 
-        const password = user.password
+        const password = user.password*/
   
       //ISI DARI CUSTOM COMMAND YANG ADA DI FOLDER SUPPORT FILE COMMANDS
-      /*cy.get('#user_login').clear() 
-      cy.get('#user_login').type(username) 
+      cy.get('#user_login').clear() 
+      cy.get('#user_login').type('username') 
   
       cy.get('input[name="user_password"]').clear() 
-      cy.get('input[name="user_password"]').type(password) 
+      cy.get('input[name="user_password"]').type('password') 
   
-      cy.get('input[name="submit"]').click()*/
+      cy.get('input[name="submit"]').click()
   
-      cy.login(username.password) //custom command
+      /*cy.login(username.password) //custom command*/
       });
   
       cy.get('#sp_payee').select('bofa')
